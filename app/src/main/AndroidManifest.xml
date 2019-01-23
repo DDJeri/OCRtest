@@ -12,7 +12,7 @@
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="安卓手机漏洞检测"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -33,6 +33,14 @@
             android:name=".ResultActivity"
             android:label="检测结果" />
 
+        <service
+            android:name=".service.Appinformation.AppInformation"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.message.MessageDetection"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

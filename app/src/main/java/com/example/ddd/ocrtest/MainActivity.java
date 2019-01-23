@@ -20,6 +20,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.ddd.ocrtest.db.Picture;
+import com.example.ddd.ocrtest.service.Appinformation.AppInformation;
+import com.example.ddd.ocrtest.service.message.MessageDetection;
 import com.example.ddd.ocrtest.service.picture.pictureService;
 
 import org.litepal.LitePal;
@@ -84,14 +86,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 pictureBinder.OcrProcess();
                 break;
             case R.id.ShortMessageDetection:
-                //messageBinder.DetectionProcess();
+                Intent intent_Message = new Intent(this, MessageDetection.class);
+                startService(intent_Message);
                 break;
             case R.id.delete:
                 LitePal.deleteAll(Picture.class);
                 break;
             case R.id.publickey:
-                //Intent intent_App = new Intent(this, AppInformation.class);
-                //startService(intent_App);
+                Intent intent_App = new Intent(this, AppInformation.class);
+                startService(intent_App);
                 break;
             case R.id.Result:
                 Intent intent = new Intent(MainActivity.this, ResultActivity.class);
