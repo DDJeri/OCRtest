@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/PictureDetection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片检测" >
+    </Button>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:max="1000"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/ShortMessageDetection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="短信检测" >
+    </Button>
+    <ProgressBar
+        android:id="@+id/message_progress_bar"
+        android:max="1000"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/publickey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第三方应用检测" >
+    </Button>
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除图片数据库" >
+    </Button>
+    <Button
+        android:layout_marginTop="60dp"
+        android:id="@+id/Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检测结果" >
+    </Button>
+
+</LinearLayout>
